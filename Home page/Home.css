@@ -1,0 +1,1005 @@
+@font-face{
+    font-family: 'Fira Sans';
+    src: url(../Fonts/FiraSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url(../Fonts/FiraSans-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: Slait;
+    src: url(../Fonts/Slaitmonolinedemo-1GPjM.ttf);
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url(../Fonts/OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url(../Fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+/* Page structure */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+
+html, body{
+    height: auto;
+    width: 100%;
+}
+
+/* Banner  Container*/
+.bannerContainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Photos/Home_Banner.jpg);
+    background-position: center top;
+    background-size: 110% 110%;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bannerContainer::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 33%, rgba(255,255,255,0.7) 55%, rgba(255,255,255,0) 100%);
+}
+
+.bannerContainer header{
+    width: 100%;
+    height: 15%;
+    position: relative;
+    z-index: 2;
+}
+
+.headerBlur{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+    filter: blur(20px);
+    background-image: url(../Photos/Home_Banner.jpg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+        /* Navigation */
+        .navigation{
+            width: 100%;
+            height: 100%;
+        }
+
+        .navigation ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navigation ul li{
+            list-style-type: none;
+            
+        }
+
+        .navigation li a {
+            color: #606c38;
+            text-decoration: none;
+            font-family: 'Fira Sans';
+            font-size: 1.5em;
+        }
+
+        #logo{
+            font-size: 4em;
+            font-family: Slait;
+        }
+
+        #logo span{
+            color: #bc6c25;
+            font-size: 1em;
+        }
+
+        #mobileMenuContainer{
+            display: none;
+        }
+
+        /* Banner booking */
+        .bannerBooking{
+            width: 70%;
+            height: 85%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 5em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        
+
+        .welcomeContainer{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bannerBooking p.heading {
+            font-family: 'Fira Sans';
+            font-size: 3em;
+            color: white;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .heading::after{
+            content: "";
+            height: 0px;
+            width: 50%;
+            border-top: 3px solid white;
+            position: absolute;
+            bottom: 0px;
+            left: 25%;
+        }
+
+        .welcomeStatement{
+            color: white;
+            font-size: 0.8em;
+            font-family: 'Open Sans';
+            text-align: center;
+
+        }
+
+        /* Booking form */
+        .bannerBooking form {
+            width: 90%;
+            height: 30%;
+            background-color: rgb(0, 0, 0, 0.5);
+            margin-top: 5em;
+            padding: 0 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .bannerBooking form fieldset{
+            border: none;
+        }
+
+        .destination{
+            flex-basis: 40%;
+        }
+
+        
+
+        .destination select option{
+            color: #283618;
+        }
+
+        .destination select option:nth-of-type(odd){
+            background-color:rgb(222, 222, 222, 0.5);
+        }
+
+        .tripInfor{
+            display: flex;
+            flex-basis: 60%;
+            justify-content: space-evenly;
+        }
+
+        #day{
+            width: 50%;
+        }
+
+        #numOfGuest{
+            width: 30%;
+        }
+
+        .bannerBooking form select, .bannerBooking form input{
+            color: white;
+            background-color: transparent;
+            font-size: 1.5em;
+            border: none;
+            border-bottom: 2px solid white;
+            font-family: 'Open Sans';
+        }
+
+        .bannerBooking form select:focus ,.bannerBooking form input:focus{
+            outline: none;
+        }
+
+        .bannerBooking form input::placeholder{
+            color: white;
+        }
+
+        ::-webkit-calendar-picker-indicator{
+            filter: invert(1);
+            cursor: pointer;
+        }
+
+        .bannerBooking form button{
+            background-color: transparent;
+            border: none;
+        }
+
+        .bannerBooking form button span{
+            display: none;
+        }
+
+        .bannerBooking form button i{
+            color: white;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+/* Button moving down between banner and mission statement */
+
+.movingDownButton{
+    position: absolute;
+    bottom: 0.5em;
+    cursor: pointer;
+    color: #283618;
+    font-size: 2em;
+    left: 50%;
+    z-index: 2;
+}
+
+/* Mission statement Section */
+
+.missionStatementContainer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 0em;
+}
+
+.missionStatementContainer >div{
+}
+
+.missionStatement {
+    flex-basis: 60%;
+    padding: 2em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: #283618;
+    font-size: 1em;
+    font-family: 'Open Sans';
+    width: 50%;
+    margin-top: 2em;
+}
+
+.title{
+    color: #dda15e;
+    width: 60%;
+    font-size: 3em;
+    font-family: 'Fira Sans';
+
+}
+
+.missionStatement > button{
+    margin-top: 3em;
+    padding: 1em 2em;
+    background-color: white;
+    border-color: #283618;
+    cursor: pointer;
+    font-family: 'Open Sans';
+    color: #283618;
+}
+
+.image2{
+    width: 70%;
+    margin-top: 2em;
+    overflow: hidden;
+}
+
+.image2 > img {
+    width: 120%;
+}
+
+.image1{
+    padding: 1em 0em;
+    flex-basis: 40%;
+}
+
+.image1 div{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image1 img{
+    width: 110%;
+    display: block;
+}
+
+
+/* Pick your tour section */
+.pickYourTour{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+        /* Title */
+        .titleContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .titleContainer .title{
+            display: inline-block;
+            width: auto;
+            padding: 0em 1em;
+            position: relative;
+        }
+
+        .titleContainer .title::after{
+            content: "";
+            height: 0px;
+            width: 100%;
+            border-top: 2px solid #283618;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+        }
+
+        /* Slider */
+        .sliderContainer{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .sliderContainer i {
+            position: absolute;
+            color: #283618;
+            cursor: pointer;
+            font-size: 2em;
+        }
+
+        .prev{
+            left: 2em;
+            top: 50%;
+        }
+
+        .next{
+            right: 2em;
+            top: 50%;
+        }
+
+        .slider{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            position: relative;
+            transition: 1000ms ease-in-out;
+        }
+
+        .tourContainer{
+            flex-basis: 20%;
+            padding: 0em 0em;
+            transition: 1000ms ease-in-out;
+
+        }
+
+        .focused{
+            flex-basis: 60%;
+            padding: 2em 2em;
+        }
+
+        /* Tour Information */
+        .tourContainer .tourName{
+            width: 100%;
+            padding: 8em 0em;
+            transform: scale(0.8,0.8);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tourName{
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 1000ms ease-in-out;
+            z-index: 3;
+            position: relative;
+        }
+
+        .tourName p {
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Open Sans';
+            font-weight: bold;
+            text-align: center;
+        }
+         .focused .tourName{
+            margin-top: 0%;
+            padding: 8em 0em;
+            transform: scale(1,1);
+        }
+
+        .focused .tourName p {
+            font-size: 2.5em;
+        }
+
+        .tourContainer:nth-of-type(1) .tourName{
+            background-image: url(../Photos/Home_page/tour_name1.jpeg);
+        }
+
+        .tourContainer:nth-of-type(2) .tourName{
+            background-image: url(../Photos/Home_page/tour_name2.jpg);
+
+        }
+
+        .tourContainer:nth-of-type(3) .tourName{
+            background-image: url(../Photos/Home_page/tour_name3.jpg);
+
+        }
+
+      
+    
+        /* -------------------------- */
+
+        .tourDetailContainer{
+            height: 0px;
+            border-top: none;
+            display: flex;
+            border: 1px solid #283618;
+            display: flex;
+            overflow: hidden;
+            opacity: 0;
+            transition: none;
+            transform: translateY(-100%);
+            position: relative;
+            z-index: 2;
+        }
+
+        .focused .tourDetailContainer{
+            opacity: 1;
+            height: auto;
+            transform: translateY(0%);
+        }
+
+        .tourDetail{
+            flex-basis: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2em 0em;
+        }
+
+        .tourPricing{
+            flex-basis: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .tourDuration{
+            color: #606c38;
+            font-size: 2em;
+            font-family: 'Open Sans';
+            font-weight: bold;
+            padding: 0em 1em;
+        }
+
+        .tourDetail .text{
+            width: 100%;
+            margin-top: 0em;
+            padding: 1em 1em;
+            font-size: 0.9em;
+        }
+
+        .tourDetail a{
+            color: #bc6c25;
+            padding: 0em 1em;
+            text-decoration: none;
+            font-family: 'Fira Sans';
+            font-style: italic;
+        }
+
+        .tourDetail a:hover{
+            text-decoration: underline;
+        }
+
+        .calendar{
+            flex-basis: 60%;
+            padding: 1em;
+        }
+
+        .calendar input{
+            display: none;
+        }
+
+        /* calendar configuration */
+
+        .cld-main {
+            color: #283618;
+            font-family: 'Open Sans';
+        }
+
+        .today{
+            font-size: 1.5em;
+        }
+
+        .cld-label:nth-of-type(1){
+            color: red;
+        }
+
+        .cld-number{
+            cursor: pointer;
+        }
+
+
+        /* -------------------------------------------- */
+
+        .priceAndBooking{
+            flex-basis: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 1em 0em;
+        }
+
+        .priceAndBooking .price{
+            font-family: 'Open Sans' ;
+            color: #283618;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .priceAndBooking button{
+            padding: 0.5em 0.5em;
+            background-color: #bc6c25;
+            font-size: 1.2em;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+/* Contact Contaianer */
+.contactContainer{
+    width: 100%;
+    min-height: 60vh;
+    margin-top: 2em;
+    background-color: #606c38;
+    position: relative;
+    display: flex;
+}
+
+.backgroundText{
+    font-family: 'Open Sans';
+    font-size: 8em;
+    font-weight: bold;
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+    color: #606c38;
+    opacity: 0.1;
+    position: absolute;
+    left: 0.5em;
+    z-index: 2;
+}
+
+        /* contact detail information */
+        .contactInfor{
+            flex-basis: 50%;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            padding: 2em;
+        }
+
+        .contactInfor > *{
+            margin-bottom: 1em;
+        }
+        .contactForm{
+            flex-basis: 50%;
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contactTitle{
+            font-family: 'Open Sans';
+            font-size: 3em;
+            color: white;
+            text-transform: capitalize;
+            width: max-content;
+            position: relative;
+        }
+
+        .contactTitle::after{
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 0px;
+            border-top: 2px solid white;
+            left: 20%;
+            bottom: 0em;
+        }
+
+        .contactInfor a{
+            color: white;
+            text-decoration: none;
+            font-family: 'Open Sans';
+            font-size: 1.3em;
+            width: max-content;
+        }
+
+        .contactInfor a i{
+            font-size: 1.5em;
+        }
+        
+        /* contact form */
+        .contactForm form{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contactForm fieldset{
+            display: flex;
+            flex-direction: column;
+            border: none;
+            padding: 1em;
+        }
+
+        .contactForm fieldset input, .contactForm fieldset textarea{
+            width: 80%;
+            font-family: 'Open Sans';
+            font-size: 1.2em;
+            background-color: #606c38;
+            color: white;
+            border: 1px solid white;
+            margin-bottom: 1em;
+            padding: 0.5em;
+        }
+
+        .contactForm fieldset input::placeholder, .contactForm fieldset textarea::placeholder{
+            color: white;
+        }
+
+        .contactForm fieldset input:focus, .contactForm fieldset textarea:focus{
+            outline: none;
+            border-style: dashed;
+        }
+
+        .messageContainer button{
+            width: max-content;
+            padding: 0.5em 3em;
+            font-size: 1.5em;
+            font-family: 'Fira Sans';
+            background-color: white;
+            border: none;
+            color: #283618;
+            cursor: pointer;
+            border-radius: 5px;
+            border: 1px dashed white;
+
+        }
+
+        .messageContainer button:hover{
+            background-color: transparent;
+            color: white;
+        }
+
+        
+/* Media queries */
+
+/* Mobile phone in lanscape */
+@media only screen and (max-width: 500px) and (orientation: landscape){
+    .bannerContainer{
+        height: auto;
+        border: 4px solid purple;
+    }
+
+}
+
+/* Mobile phone */
+@media only screen and (max-width: 1024px) {
+    *{
+        font-size: 14px;
+    }
+    .bannerContainer{
+        background-size: cover;
+    }
+    
+    .bannerContainer header{
+        height: 10%;
+    }
+
+    .headerBlur{
+        filter: blur(20px);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .navigation ul{
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+
+    .navigation ul li{
+        display: none;
+    }
+
+    #logoContainer{
+        display: block;
+    }
+
+    #logo{
+        font-size: 2em;
+    }
+
+    #mobileMenuContainer{
+        display: block;
+    }
+
+    #mobileMenu i {
+        font-size: 1.5em;
+    }
+
+
+    .bannerBooking{
+        width: 100%;
+        height: 90%;
+    }
+
+    .bannerBooking p.heading{
+        font-size: 2.5em;
+    }
+
+    .bannerBooking form{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 45%;
+        padding: 2em 1em;
+    }
+
+    .destination{
+        flex-basis: auto;
+    }
+    .tripInfor{
+        flex-basis: auto;
+    }
+    #day{
+        width: 50%;
+    }
+
+    .bannerBooking form button span{
+        display: inline-block;
+        color: #283618;
+        font-family: 'Open Sans';
+        padding: 0.5em 2em;
+        background-color: white;
+        border-radius: 50px;
+    }
+
+    .bannerBooking form button i{
+        display: none;
+    }
+
+    .missionStatementContainer{
+        flex-direction: column;
+        padding: 1em 1em
+    }
+
+    .missionStatementContainer > div {
+        flex-basis: auto;
+    }
+
+    .missionStatement p {
+        width: 100%;
+    }
+
+    .title{
+        font-size: 2.5em;
+    }
+
+    .image2{
+        width: 100%;
+    }
+
+    .image1 div{
+        width: 100%;
+    }
+
+    .tourContainer{
+        min-width: 100%;
+    }   
+    
+    .focused{
+        padding: 1.5em 1.5em;
+    }
+
+    .focused .tourName p {
+        font-size: 2em;
+    }
+
+    .prev{
+        left: 0.1em;
+        top: 50%;
+    }
+
+    .next{
+        right: 0.1em;
+        top: 50%;
+    }
+
+    .tourDetailContainer{
+        flex-direction: column;
+    }
+
+    .calendar > div {
+        display: none;
+    }
+
+    .calendar > input{
+        width: 80%;
+        display: block;
+        color: #283618;
+        font-size: 1.5em;
+        font-family: 'Open Sans';
+        margin-right: auto;
+        margin-left: auto;
+        border: none;
+        border-bottom: 2px solid #606c38;
+    }
+
+    ::-webkit-calendar-picker-indicator{
+        filter: invert(0);
+        cursor: pointer;
+    }
+
+    .priceAndBooking{
+        padding: 1em 0em;
+    }
+
+    .priceAndBooking button{
+        font-size: 1.5em;
+    }
+
+    .contactContainer{
+        flex-direction: column;
+        overflow: hidden;
+        height: max-content;
+    }
+
+    .backgroundText{
+        white-space: nowrap;
+        left: 1.2em;
+        top: 0px;
+        transform: rotate(90deg);
+        transform-origin: left top;
+        padding: 0px;
+        font-size: 7em;
+    }
+    
+}
+
+@media only screen and (min-width: 450px) and (max-width: 1024px) {
+    *{
+        font-size: 16px;
+    }
+    .navigation ul{
+        padding: 0 3em;
+    }
+    #logo{
+        font-size: 3em;
+
+    }
+
+    #mobileMenu i {
+        font-size: 2em;
+    }
+
+    .bannerBooking{
+        width: 90%;
+    }
+
+    .bannerBooking p.heading{
+        font-size: 3em;
+    }
+
+    .title{
+        font-size: 3em;
+    }
+
+    .image2{
+        width: 80%;
+    }
+
+    .image1{
+        width: 80%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .focused .tourName p {
+        font-size: 2.5em;
+    }
+
+    .focused{
+        min-width: 90%;
+    }
+
+    .priceAndBooking button{
+        font-size: 1.8em;
+    }
+
+    .contactTitle{
+        font-size: 3.5em;
+    }
+
+    .contactInfor a{
+        font-size: 1.5em;
+    }
+} 
+
+@media only screen and (min-width: 1500px){
+    .bannerBooking form{
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .missionStatementContainer{
+        padding: 5em;
+    }
+
+    .image1 > div {
+        width: 70%;
+    }
+
+    .focused .tourName{
+        font-size: 1em
+    }
+
+
+}
+
+
