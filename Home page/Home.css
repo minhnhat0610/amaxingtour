@@ -223,6 +223,7 @@ html, body{
             background-color: transparent;
             font-size: 1.5em;
             border: none;
+            border-radius: 0em;
             border-bottom: 2px solid white;
             font-family: 'Open Sans';
         }
@@ -905,18 +906,22 @@ html, body{
 
     .contactContainer{
         flex-direction: column;
-        overflow: hidden;
+        /* overflow: hidden; */
         height: max-content;
     }
 
     .backgroundText{
         white-space: nowrap;
         left: 1.2em;
-        top: 0px;
+        top: 0em;
         transform: rotate(90deg);
         transform-origin: left top;
         padding: 0px;
         font-size: 7em;
+    }
+
+    .contactInfor a{
+        width: auto;
     }
     
 }
