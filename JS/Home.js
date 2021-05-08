@@ -161,6 +161,17 @@ $(document).ready(function(){
     })
 
 
+    //hover effect on Gallery
+    $('.col img').on('mouseenter',function(e){
+        $(e.currentTarget).addClass('zoom');
+    })
+
+    $('.col img').on('mouseleave',function(e){
+        $(e.currentTarget).removeClass('zoom');
+
+    })
+
+
 })
 
 
