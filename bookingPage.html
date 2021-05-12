@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan a trip</title>
+    <link rel="stylesheet" href="Booking page/bookingPage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+<body>
+    <div class="bannerContainer">
+        <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Plan a trip</a></li>
+                <li id="logoContainer"><a id="logo" href="">Am<span>a</span>zing T<span>ou</span>r</a></li>
+                <li><a href="">Manage you trip</a></li>
+                <li><a href="index.html">Gallery</a></li>
+                <li id="mobileMenuContainer"><a id="mobileMenu" href=""><i class="fas fa-ellipsis-h"></i></a></li>
+            </ul>
+        </nav>
+        </header>
+        <div class="headerBlur"></div>
+
+        <div class="backgroundBlur">
+
+        </div>
+
+        <div class="bookingContainer">
+            <div class="formContainer">
+                <div class="stepLabel">
+                    <span class="stepNumber activeNum">1</span>
+                    <div class="stepName activeName">
+                        <div class="progressBar"></div>
+                        <p>Date and Guests</p>
+                    </div>
+                    <span class="stepNumber">2</span>
+                    <div class="stepName">
+                        <div class="progressBar"></div>
+                        <p>Payment</p>
+                    </div>
+                    <span class="stepNumber">3</span>
+                    <div class="stepName">
+                        <div class="progressBar"></div>
+                        <p>Review</p>
+                    </div>
+                </div>
+
+                <div class="formSlider">
+                    <form id="dateAndGuests">
+                        <fieldset class="dateInput">
+                            <div><label for="startDate">start date: </label>
+                                <div>
+                                    <input type="text" id="startDate" name="start_date" required/>
+                                    <i id="startDateIcon" class="far fa-calendar"></i>
+                                </div>
+                                
+                            </div>
+                            <div><label for="endDate">end date: </label>
+                                <div>
+                                    <input type="text" id="endDate" name="end_date" required/>
+                                    <i id="endDateIcon" class="far fa-calendar"></i>
+                                </div>
+                                
+    
+                            </div>
+                                
+                        </fieldset>
+    
+                        <fieldset class="guestInformation">
+                            <div class="basic">
+                                <label for="guestFirstName1">first name: </label>
+                                <input type="text" id="guestFirstName1" name="guest_First1" required/>
+                                <label for="guestLastName1">last name: </label>
+                                <input type="text" id="guestLastName1" name="guest_Last1" required/>
+                                <label for="guestEmail1">Email: </label>
+                                <input type="email" id="guestEmail1" name="guest_Emai1" required/>
+                            </div>
+                            
+                            <div class="extra">
+                                <label for="guestPhone1">phone number: </label>
+                                <input type="tel" id="guestPhone1" name="guest_Phone1" required/>
+                                <label>Gender: </label>
+                                <div> 
+                                    <input type="radio" id="male" name="male_gender"/>
+                                    <label class="genderLabel" for="male">male</label>
+                                </div>
+                                
+                                <div>
+                                    <input type="radio" id="female" name="female_gender"/>
+                                    <label class="genderLabel" for="female">female</label>
+        
+                                </div>
+    
+                            </div>
+                            
+    
+                        </fieldset>
+
+                        
+                        
+
+                        
+
+                        <button type="button" id="addGuestButton">+ add guest</button>
+
+                    </form>
+
+                    <form id="payment">
+                        <fieldset class="cardInfor">
+                            <legend>Payment information</legend>
+                            <label for="cardName">name on card: </label>
+                            <input type="text" id="cardName" name="card_Name" required/>
+                            <label for="cardNumber">card number: </label>
+                            <input type="text" id="cardNumber" name="card_Number" required/>
+                            <label for="cardExp">expiration: </label>
+                            <input type="text" id="cardExp" name="card_Exp" placeholder="MM/YYYY" required/>
+                            <label for="cardCVV">CVV: </label>
+                            <input type="text" id="cardCVV" name="card_CVV" required/>
+                        </fieldset>
+
+                        <fieldset class="billing">
+                            <legend>Billing address</legend>
+                            <label for="streetName">street: </label>
+                            <input type="text" id="streetName" name="street_Name" required/>
+                            <label for="cityName">City: </label>
+                            <input type="text" id="cityName" name="city_Name"  required/>
+                            <label for="stateName">State: </label>
+                            <input type="text" id="stateName" name="state_Name" required/>
+                            <label for="zipcode">Zipcode: </label>
+                            <input type="text" id="zipcode" name="zip_code" required/>
+                        </fieldset>
+                    </form>
+
+                    <form id="review">
+                        
+                    </form>
+
+                </div>
+            
+                <div class="buttonContainer">
+                    <button type="button" id="pre">Back</button>
+                    <button type="button" id="next">Continue</button>
+                </div>
+
+                
+                
+            </div>
+            <div class="tourImageDisplay">
+                <p>yosemite national park</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/e23e09cf11.js" crossorigin="anonymous"></script>
+    <script src="JS/bookingPage.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+</body>
+</html>

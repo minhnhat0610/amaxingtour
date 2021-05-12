@@ -194,7 +194,6 @@ html, body{
             flex-basis: 40%;
         }
 
-        
 
         .destination select option{
             color: #283618;
@@ -217,6 +216,8 @@ html, body{
         #numOfGuest{
             width: 30%;
         }
+
+        
 
         .bannerBooking form select, .bannerBooking form input{
             color: white;
