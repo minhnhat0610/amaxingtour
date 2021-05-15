@@ -111,7 +111,7 @@
 
                     <form id="payment">
                         <fieldset class="cardInfor">
-                            <legend>Payment information</legend>
+                            <legend> <i class="fas fa-id-card"></i> Payment information</legend>
                             <label for="cardName">name on card: </label>
                             <input type="text" id="cardName" name="card_Name" required/>
                             <label for="cardNumber">card number: </label>
@@ -123,7 +123,7 @@
                         </fieldset>
 
                         <fieldset class="billing">
-                            <legend>Billing address</legend>
+                            <legend><i class="fas fa-map-marker-alt"></i> Billing address</legend>
                             <label for="streetName">street: </label>
                             <input type="text" id="streetName" name="street_Name" required/>
                             <label for="cityName">City: </label>
@@ -136,7 +136,57 @@
                     </form>
 
                     <form id="review">
-                        
+                        <fieldset class="tourInfor">
+                            <legend><i class="fas fa-bus"></i> Tour information</legend>
+                            <div>
+                                <div>
+                                    <label for="startDateReview">start date:</label>
+                                <input type="text" id="startDateReview" name="startDate_Review" readonly/>
+                                </div>
+                                <div>
+                                    <label for="endDateReview">end date:</label>
+                                    <input type="text" id="endDateReview" name="endDate_Review" readonly/>
+    
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <label for="tourName">tour name:</label>
+                                    <input type="text" id="tourName" name="tour_Name" readonly value="Yosemite National Park"/>
+    
+                                </div>
+
+                                <div>
+                                    <label for="confirmationNumber">confirmation:</label>
+                                    <input type="text" id="confirmationNumber" name="confirmation_Number" readonly/>
+    
+                                </div>
+                            </div>
+                            
+
+                        </fieldset>
+
+                        <fieldset class="guestInforReview">
+                            <legend><i class="fas fa-user"></i> Guest #1</legend>
+                            <div>
+                                <label for="guestFirstNameReview1">first name:</label>
+                                <input type="text" id="guestFirstNameReview1" name="guest_First_Name_Review_1" readonly/>
+                                <label for="guestLastNameReview1">last name:</label>
+                                <input type="text" id="guestLastNameReview1" name="guest_Last_Name_Review_1" readonly/>
+                                <label for="emailReview1">Email:</label>
+                                <input type="text" id="emailReview1" name="email_Review_1" readonly/>
+                            </div>
+
+                            <div>
+                                <label for="phoneReview1">phone number:</label>
+                                <input type="text" id="phoneReview1" name="phone_Review1" readonly/>
+                                <label for="genderReview1">gender:</label>
+                                <input type="text" id="genderReview1" name="gender_Review1" readonly/>
+                            </div>
+                            
+
+                        </fieldset>
                     </form>
 
                 </div>
