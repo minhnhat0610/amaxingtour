@@ -33,9 +33,12 @@ $(document).ready(function(){
     $('#startDate').flatpickr({
         defaultDate: 'today',
         dateFormat: 'm-d-Y',
+        disableMobile: 'true',
     });
     $('#endDate').flatpickr({
         dateFormat: 'm-d-Y',
+        disableMobile: 'true',
+
     });
 
     $('#startDateIcon').on('click',function(){

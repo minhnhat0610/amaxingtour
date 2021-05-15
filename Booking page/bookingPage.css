@@ -344,6 +344,7 @@ html, body{
             border-bottom: 2px solid #283618;
             margin-left: 2em;
             margin-bottom: 1em;
+            box-shadow: none;
         }
 
         .guestInformation input:focus{
@@ -592,6 +593,15 @@ html, body{
         flex-direction: column;
     }
 
+    .cardInfor{
+        border-bottom: 2px dashed #bc6c25;
+        padding: 2em 0em;
+    }
+
+    .billing{
+        margin-top: 2em;
+    }
+
     .billing legend{
         margin-left: 1em;
     }
@@ -621,7 +631,7 @@ html, body{
         font-size: 2em;
     }
     .stepName{
-        margin-top: 2%;
+        margin-top: 3%;
     }
     .stepName p{
         font-size: 1em;
@@ -637,6 +647,15 @@ html, body{
 
     #payment input{
         width: 70%;
+    }
+
+    .cardInfor{
+        border-bottom: none;
+        padding: 0em;
+    }
+
+    .billing{
+        margin-top: 0em;
     }
 }
 
