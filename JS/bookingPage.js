@@ -49,16 +49,52 @@ $(document).ready(function(){
         $('#endDate').trigger('click');
     })
 
+
+    //Transfer data from Date and Guest form to Review form
+
+    let dateInputLength = $('.dateInput input').length;
+    let guestBasicInforLength = $('.guestInformation .basic input').length;
+    let guestextraInforLength = $('.guestInformation .extra input').length;
+
+    let TransferData = (source, destination, length) => {
+        for(let i = 0; i< length; i++){
+            let value;
+            if($(source).eq(i).attr('type') == 'radio'){
+                let newSource = source + '[name="gender"]:checked';
+                value = $(newSource).val();
+            }
+            else{
+                value = $(source).eq(i).val();
+            }
+
+
+            $(destination).eq(i).val(value);
+        }
+    }
+
+    //Create a Confirmation
+    let ConfirmationGenerator = () => {
+        let string = "#" + Math.random().toString(36).substring(2,8);
+        $('#confirmationNumber').val(string);
+    }
+
+
     //next button function
 
     let numOfForm = $('.formSlider form').length;
     let count = 0;
-    console.log(count);
     $('#next').on('click',function(){
         let report = $('.formSlider form').get(count).reportValidity();
         if(report){
             slideNext();
             changeActiveStep();
+            if(count==1){
+                TransferData('.dateInput input', '.tourInfor input',dateInputLength);
+                TransferData('.guestInformation .basic input', '.guestInforReview .basicReview input',guestBasicInforLength);    
+                TransferData('.guestInformation .extra input', '.guestInforReview .extraReview input', guestextraInforLength)     
+                ConfirmationGenerator();   
+
+            }
         }
     })
 
@@ -125,4 +161,9 @@ $(document).ready(function(){
         $('.stepLabel > div').removeClass('activeName');
         $('.stepLabel > div').eq(count).addClass('activeName');
     }
+
+
+    
+
+
 })

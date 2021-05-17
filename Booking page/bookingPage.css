@@ -525,6 +525,10 @@ html, body{
         margin-left: 1em !important;
     }
 
+    .tourInfor #confirmationNumber{
+        font-weight: bold;
+    }
+
 
     /* #review label::after{
         content: "";
