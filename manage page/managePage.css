@@ -1,0 +1,743 @@
+@font-face{
+    font-family: 'Fira Sans';
+    src: url(../Fonts/FiraSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Fira Sans';
+    src: url(../Fonts/FiraSans-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: Slait;
+    src: url(../Fonts/Slaitmonolinedemo-1GPjM.ttf);
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url(../Fonts/OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Open Sans';
+    src: url(../Fonts/OpenSans-Bold.ttf);
+    font-weight: bold;
+}
+
+/* Page structure */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  
+}
+
+html, body{
+    height: auto;
+    width: 100%;
+}
+
+/* Banner  Container*/
+.bannerContainer{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(../Photos/Yosemite_tour/Yosemite_Banner.jpg);
+    background-position: center top;
+    background-size: 110% 110%;
+    background-clip: border-box;
+    background-repeat: no-repeat; */
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+
+.bannerContainer header{
+    width: 100%;
+    height: 15%;
+    position: relative;
+    z-index: 2;
+}
+
+.backgroundBlur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url(../Photos/Yellowstone_tour/Yellowstone_banner.jpg);
+    background-position: center top;
+    background-size: 110% 110%;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    z-index: 1;
+}
+
+.headerBlur{
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+    filter: blur(0px);
+    /* background-image: url(../Photos/Yosemite_tour/Yosemite_Banner.jpg);
+    background-position: center top;
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+
+        /* Navigation */
+        .navigation{
+            width: 100%;
+            height: 100%;
+        }
+
+        .navigation ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navigation ul li{
+            list-style-type: none;
+            
+        }
+
+        .navigation li a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Fira Sans';
+            font-size: 1.5em;
+        }
+
+        #logo{
+            font-size: 4em;
+            font-family: Slait;
+            color: #606c38;
+        }
+
+        #logo span{
+            color: #bc6c25;
+            font-size: 1em;
+        }
+
+        #mobileMenuContainer{
+            display: none;
+        }
+
+/* Manage trip container */
+.manageTripContainer{
+    width: 80%;
+    height: 85%;
+    max-height: 85%;
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0em;
+}
+
+.formContainer{
+    flex-basis: 70%;
+    height: 90%;
+    background-color: white;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.tourImageDisplay{
+    flex-basis: 30%;
+    height: 100%;
+    transform: translateX(0.5em);
+    z-index: 4;
+    background-image: url(../Photos/Yellowstone_tour/Yellowstone_photo1.jpg);
+    background-size: cover;
+    background-attachment: local;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow:  20px 0px 60px #bebebe,
+                -20px 0px 45px rgb(255, 255, 255, 0.5);
+
+}
+
+.tourImageDisplay::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.tourImageDisplay p{
+    color: white;
+    text-transform: uppercase;
+    font-size: 4em;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    line-height: 2em;
+    word-spacing: 3.5em;
+    position: relative;
+    z-index: 2;
+
+}
+
+.controllButtonContainer{
+    display: flex;
+    height: 10%;
+    align-items: center;
+}
+
+.controllButtonContainer button{
+    width: fit-content;
+    height: fit-content;
+    padding: 0.3em 1em;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+#pre{
+    width: fit-content;
+    background-color: #606c38;
+    border: 2px dashed #606c38;
+    margin-left: 2em;
+    display: none;
+}
+
+#pre:hover{
+    background-color: white;
+    color: #606c38;
+}
+
+#next{
+    background-color: #bc6c25;
+    border: 2px dashed #bc6c25;
+    margin-right: 1em;
+    margin-left: auto;
+
+}
+
+#next:hover{
+    background-color: white;
+    color: #bc6c25;
+}
+
+        /* Form Slider */
+        .formSlider{
+            height: 90%;
+            display: flex;
+            transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+
+        }
+
+        .formSlider > form{
+            min-width: 100%;
+        }
+
+        #tripLookup{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title{
+            display: none;
+            height: 15%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title p{
+            font-family: 'Fira Sans';
+            font-weight: bold;
+            font-size: 2em;
+            text-transform: capitalize;
+            color: #283618;
+            text-align: center;
+            padding: 1em 0em;
+        }
+
+        .fieldsetContainer{
+            width: 70%;
+        }
+
+        #tripLookup fieldset{
+            display: flex;
+            font-family: 'Open Sans';
+            align-items: baseline;
+            border: none;
+            margin-top: 2em;
+        }
+
+        .formSlider label{
+            text-transform: capitalize;
+            font-weight: bold;
+            font-size: 1.4em;
+            color: #283618;
+            width: fit-content;
+            padding: 0.5em 1em;
+        }
+
+        .formSlider input{
+            border-radius: 0px;
+            font-size: 1.2em;
+            color: #283618;
+            width: fit-content;
+            width: -moz-fit-content;
+            border: none;
+            border-bottom: 2px solid #283618;
+            margin-left: 2em;
+            margin-bottom: 1em;
+            box-shadow: none;
+        }
+
+        .formSlider input:focus{
+            outline: none;
+        }
+
+        #confirmationNumber{
+            text-transform: uppercase;
+
+        }
+
+        #tripValidReport{
+            color: #a4161a;
+            padding: 0.5em 1em;
+            font-family: 'Open Sans';
+            font-size: 1.2em;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            margin-top: 1em;
+        }
+
+        #tripValidReport i{
+            font-size: 2em;
+            color: #e5383b;
+            margin-right: 0.2em;
+        }
+
+        /* Trip display */
+        #tripDisplay{
+            display: none;
+            flex-wrap: wrap;
+            font-family: 'Open Sans';
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        #tripDisplay legend{
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #283618;
+            text-transform: capitalize;
+        }
+
+
+
+        #tripDisplay label{
+            white-space: nowrap;
+            padding: 0em;
+        }
+    
+    
+        #tripDisplay input{
+            width: fit-content;
+            padding: 0em;
+            border-bottom: none;
+        }
+    
+        #tripDisplay input:focus{
+            outline: none;
+        }
+
+        #tripDisplay i{
+            font-size: 1.5em;
+        }
+
+        #tripDisplay .tourInfor{
+            display: flex;
+            border-radius: 0px;
+            flex-basis: 100%;
+            border: none;
+            position: relative;
+            z-index: 3;
+        }
+
+        .tourInfor > div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 50%;
+            padding: 2.5em;
+
+        }
+    
+    
+        .tourInfor > div > div{
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start;
+        }
+
+        .tourInfor legend{
+            width: 100%;
+            box-shadow:
+            0 0.3px 2.2px rgba(0, 0, 0, 0.02),
+            0 0.7px 5.3px rgba(0, 0, 0, 0.028),
+            0 1.4px 10px rgba(0, 0, 0, 0.035),
+            0 2.5px 17.9px rgba(0, 0, 0, 0.042),
+            0 4.6px 33.4px rgba(0, 0, 0, 0.05),
+            0 11px 80px rgba(0, 0, 0, 0.07)
+            ;
+            padding: 1em 2em;
+        }
+    
+        .tourInfor input{
+            width: 40% !important;
+            margin-left: 1em !important;
+        }
+    
+        .tourInfor #confirmationNumber{
+            font-weight: bold;
+        }
+
+    
+        .guestInforReview{
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            border: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .guestControl{
+            flex-basis: 100%;
+            min-width: 100%;
+            display: flex;
+            flex-direction: row;
+            box-shadow:
+            0 0.3px 2.2px rgba(0, 0, 0, 0.02),
+            0 0.7px 5.3px rgba(0, 0, 0, 0.028),
+            0 1.4px 10px rgba(0, 0, 0, 0.035),
+            0 2.5px 17.9px rgba(0, 0, 0, 0.042),
+            0 4.6px 33.4px rgba(0, 0, 0, 0.05),
+            0 11px 80px rgba(0, 0, 0, 0.07)
+            ;
+            padding: 1em 3em;
+            align-items: center;
+        }
+
+        .guestControl .updateButton{
+            width: fit-content;
+            padding: 0.5em 1em;
+            background-color: #bc6c25;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            margin-left: auto;
+            text-transform: capitalize;
+            font-weight: bold;
+            font-size: 0.8em;
+            border-bottom: 5px solid #dda15e;
+        }
+
+        .guestInforReview > div{
+            display: flex;
+            flex-basis: 50%;
+        }
+
+        .basicReview, .extraReview{
+            flex-direction: column;
+            padding: 2.5em;
+        }
+
+    /* Trip Cancel Button */
+    .tripCancel{
+        flex-basis: 100%;
+        min-width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+
+    #tripCancelButton{
+        text-transform: capitalize;
+        font-size: 1.3em;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        background-color: #e5383b;
+        border: none;
+        border-bottom: 5px solid #a4161a;
+        color: white;
+        cursor: pointer;
+    }
+
+    .finalConfirm{
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .finalConfirm p{
+        font-size: 1.5em;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+        color: #bc6c25;
+    }
+
+    .confirmButtonContainer{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .confirmButtonContainer button{
+        font-size: 1.3em;
+        color: white;
+        text-transform: capitalize;
+        border-radius: 5px;
+        border: none;
+        padding: 0.5em 1em;
+        margin-top: 1em;
+        cursor: pointer;
+    }
+
+    #yesConfirmation{
+        background-color: #606c38;
+        border-bottom: 5px solid #283618;
+    }
+
+    #noConfirmation{
+        background-color: #e5383b;
+        border-bottom: 5px solid #a4161a;
+    }
+
+    .serverReportContainer{
+        width: 100%;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .serverReportContainer i {
+        font-size: 4em !important;
+        color: #e5383b;
+    }
+
+    .serverReportContainer p{
+        color: #283618;
+        line-height: 2.5em;
+        text-align: center;
+    }
+
+    .serverReportContainer p::first-letter{
+        text-transform: uppercase;
+    }
+
+    .reportCatch{
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .farwell{
+        font-size: 1.2em;
+        font-style: italic;
+    }
+
+@media only screen and (max-height:500px) and (orientation:landscape)
+{
+    .bannerContainer{
+        height: auto;
+        border: 4px solid purple;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    *{
+        font-size: 14px;
+    }
+    .bannerContainer{
+        background-size: cover;
+    }
+    
+    .bannerContainer header{
+        height: 10%;
+    }
+
+    .headerBlur{
+        filter: blur(20px);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .navigation ul{
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+
+    .navigation ul li{
+        display: none;
+    }
+
+    #logoContainer{
+        display: block;
+    }
+
+    #logo{
+        font-size: 2em;
+    }
+
+    #mobileMenuContainer{
+        display: block;
+    }
+
+    #mobileMenu i {
+        font-size: 1.5em;
+    }
+
+    .manageTripContainer{
+        width: 95%;
+        padding: 1em 0em;
+    }
+
+    .tourImageDisplay{
+        display: none;
+    }
+
+    .formContainer{
+        flex-basis: 100%;
+        height: 100%;
+    }
+
+    .title{
+        display: flex;
+        width: 100%;
+        margin-bottom: auto;
+        box-shadow:
+        0 0.3px 2.2px rgba(0, 0, 0, 0.02),
+        0 0.7px 5.3px rgba(0, 0, 0, 0.028),
+        0 1.4px 10px rgba(0, 0, 0, 0.035),
+        0 2.5px 17.9px rgba(0, 0, 0, 0.042),
+        0 4.6px 33.4px rgba(0, 0, 0, 0.05),
+        0 11px 80px rgba(0, 0, 0, 0.07)
+      ;
+
+    }
+
+    .fieldsetContainer{
+        margin-bottom: auto;
+        width: 100%;
+    }
+
+    #tripLookup fieldset{
+        flex-direction: column;
+    }
+
+    .tourInfor {
+        flex-direction: column;
+    }
+
+    .tourInfor legend{
+        padding: 0.5em 1em;
+    }
+
+    .tourInfor > div{
+        width: 100%;
+        padding: 1em;
+    }
+
+    .tourInfor input{
+        width: fit-content !important;
+        font-size: 1em;
+    }
+
+    .guestInforReview {
+        flex-direction: column;
+    }
+
+    .guestControl{
+        padding: 1em 2em;
+    }
+
+    .basicReview, .extraReview{
+        padding: 1em;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 1024px){
+    *{
+        font-size: 20px;
+    }
+    .navigation ul{
+        padding: 0 3em;
+    }
+    #logo{
+        font-size: 3em;
+
+    }
+
+    #mobileMenu i {
+        font-size: 2em;
+    }
+
+    .tourInfor {
+        flex-direction: column;
+    }
+
+    .tourInfor > div{
+        width: 100%;
+        padding: 1em 0.5em;
+    }
+
+
+    .tourInfor input{
+        width: fit-content !important;
+        font-size: 1em;
+    }
+
+    .guestInforReview {
+        flex-direction: row;
+    }
+
+    .guestInforReview input{
+        width: 70% !important;
+    }
+
+}
+
+@media only screen and (min-width: 1500px){
+
+}

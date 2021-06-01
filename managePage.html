@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage your trip</title>
+    <link rel="stylesheet" href="manage page/managePage.css">
+</head>
+<body>
+    <div class="bannerContainer">
+        <header>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bookingPage.php">Plan a trip</a></li>
+                    <li id="logoContainer"><a id="logo" href="">Am<span>a</span>zing T<span>ou</span>r</a></li>
+                    <li><a href="">Manage you trip</a></li>
+                    <li><a href="index.html">Gallery</a></li>
+                    <li id="mobileMenuContainer"><a id="mobileMenu" href=""><i class="fas fa-ellipsis-h"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="headerBlur"></div>
+
+        <div class="backgroundBlur">
+
+        </div>
+
+        <div class="manageTripContainer">
+            <div class="tourImageDisplay">
+                <p>Manage your trip</p>
+            </div>
+            <div class="formContainer">
+                <div class="formSlider">
+                    
+                    <form id="tripLookup">
+                        <div class="title">
+                            <p>manage your trip</p>
+                        </div>
+                        <div class="fieldsetContainer">
+                            <fieldset>
+                                <label for="confirmationNumber">confirmation: </label>
+                                <input type="text" id="confirmationNumber" name="confirmation_Number" required>
+                            </fieldset>
+                            <fieldset>
+                                <label for="guestLastName">last name: </label>
+                                <input type="text" id="guestLastName" name="guest_Last_Name" required>
+                            </fieldset>
+                            <p id="tripValidReport"><i class="fas fa-times-circle"></i> Unable to find your trip. Please try again!</p>
+                        </div>
+                        
+                    </form>
+                    <form id="tripDisplay">
+                        <fieldset class="tourInfor">
+                            <legend><i class="fas fa-bus"></i> Tour information</legend>
+                            <div>
+                                <div>
+                                    <label for="startDateReview">start date:</label>
+                                <input type="text" id="startDateReview" name="startDate_Review" readonly/>
+                                </div>
+                                <div>
+                                    <label for="endDateReview">end date:</label>
+                                    <input type="text" id="endDateReview" name="endDate_Review" readonly/>
+    
+                                </div>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <label for="tourName">tour name:</label>
+                                    <input type="text" id="tourName" name="tour_Name" readonly/>
+    
+                                </div>
+
+                                <div>
+                                    <label for="confirmationNumber">confirmation:</label>
+                                    <input type="text" id="confirmationNumber" name="confirmation_Number" readonly/>
+    
+                                </div>
+                            </div>
+                            
+
+                        </fieldset>
+
+                        <fieldset class="guestInforReview">
+                            <div class="guestControl">
+                                <legend><i class="fas fa-user"></i> Guest #1 </legend>    
+                                <button type="button" class="updateButton"><i class="fas fa-edit"></i>Edit</button>
+                            </div>
+                            <div class="basicReview">
+                                <label for="guestFirstNameReview1">first name:</label>
+                                <input type="text" id="guestFirstNameReview1" name="guest_First_Name_Review_1" readonly/>
+                                <label for="guestLastNameReview1">last name:</label>
+                                <input type="text" id="guestLastNameReview1" name="guest_Last_Name_Review_1" readonly/>
+                                <label for="emailReview1">Email:</label>
+                                <input type="text" id="emailReview1" name="email_Review_1" readonly/>
+                            </div>
+
+                            <div class="extraReview">
+                                <label for="phoneReview1">phone number:</label>
+                                <input type="text" id="phoneReview1" name="phone_Review_1" readonly/>
+                                <label for="genderReview1">gender:</label>
+                                <input type="text" id="genderReview1" name="gender_Review_1" readonly/>
+                            </div>
+                            
+
+                        </fieldset>
+
+                        <div class="tripCancel">
+                            <button type="button" id="tripCancelButton">cancel my trip</button>
+                            <div class="finalConfirm">
+                                <p>do you really want to cancel this trip?</p>
+                                <div class="confirmButtonContainer">
+                                    <button type="button" id="yesConfirmation">Yes</button>
+                                    <button type="button" id="noConfirmation">No</button>
+                                </div>
+                            </div>
+                            <div class="serverReportContainer">
+                                <i class="fas fa-frown"></i>
+                                <p class="reportCatch">trip has been canceled successfully!</p>
+                                <p class="farwell">- We regret to see you go -</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="controllButtonContainer">
+                    <button type="button" id="pre">Back</button>
+                    <button type="button" id="next">Continue</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/e23e09cf11.js" crossorigin="anonymous"></script>
+    <script src="JS/managePage.js"></script>
+
+</body>
+</html>

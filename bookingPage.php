@@ -17,7 +17,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="">Plan a trip</a></li>
                 <li id="logoContainer"><a id="logo" href="">Am<span>a</span>zing T<span>ou</span>r</a></li>
-                <li><a href="">Manage you trip</a></li>
+                <li><a href="managePage.html">Manage you trip</a></li>
                 <li><a href="index.html">Gallery</a></li>
                 <li id="mobileMenuContainer"><a id="mobileMenu" href=""><i class="fas fa-ellipsis-h"></i></a></li>
             </ul>
@@ -51,6 +51,14 @@
 
                 <div class="formSlider">
                     <form id="dateAndGuests">
+                        <fieldset class="desInput">
+                            <label for="destination">choose your tour: </label>
+                            <select id="destination" name="destination">
+                                <option>Yosemite National Park</option>
+                                <option>Yellowstone National Park</option>
+                                <option>Washington DC</option>
+                             </select>
+                        </fieldset>
                         <fieldset class="dateInput">
                             <div><label for="startDate">start date: </label>
                                 <div>
@@ -138,7 +146,7 @@
                     <form id="review">
                         <fieldset class="tourInfor">
                             <legend><i class="fas fa-bus"></i> Tour information</legend>
-                            <div>
+                            <div class="dateReview">
                                 <div>
                                     <label for="startDateReview">start date:</label>
                                 <input type="text" id="startDateReview" name="startDate_Review" readonly/>
@@ -153,7 +161,7 @@
                             <div>
                                 <div>
                                     <label for="tourName">tour name:</label>
-                                    <input type="text" id="tourName" name="tour_Name" readonly value="Yosemite National Park"/>
+                                    <input type="text" id="tourName" name="tour_Name" readonly/>
     
                                 </div>
 
@@ -180,13 +188,24 @@
 
                             <div class="extraReview">
                                 <label for="phoneReview1">phone number:</label>
-                                <input type="text" id="phoneReview1" name="phone_Review1" readonly/>
+                                <input type="text" id="phoneReview1" name="phone_Review_1" readonly/>
                                 <label for="genderReview1">gender:</label>
-                                <input type="text" id="genderReview1" name="gender_Review1" readonly/>
+                                <input type="text" id="genderReview1" name="gender_Review_1" readonly/>
                             </div>
                             
 
                         </fieldset>
+                    </form>
+
+                    <form id="result">
+                        <div class="checkmark">
+                            <div class="check"><div></div></div>
+                            <div class="fill"></div>
+                        </div>
+                        <p class="thankMessage">thank you for choosing us</p>
+                        <p>a confirmation has sent out to your email</p>
+                        <p >we are looking forward to see you on tour!</p>
+                        <p class="responseFromServer"></p>
                     </form>
 
                 </div>
@@ -200,7 +219,7 @@
                 
             </div>
             <div class="tourImageDisplay">
-                <p>yosemite national park</p>
+                <p>plan your trip</p>
             </div>
         </div>
         
@@ -209,8 +228,9 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/e23e09cf11.js" crossorigin="anonymous"></script>
-    <script src="JS/bookingPage.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="JS/bookingPage.js" ></script>
+
 
 </body>
 </html>
